@@ -8,9 +8,7 @@ def output(*args, **kwargs):
   [X, Y, M] = distance_matrix(seq1.value, seq2.value)
   [str1, str2] = backtrace(seq1.value, seq2.value, X, Y, M)
   score = M[len(seq2.value)][len(seq1.value)]
-  # js.document.write("Alignment Score:" + str(score) + "<br>")
-  # js.document.write(str1 + "<br>")
-  # js.document.write(str2 + "<br>")
+
   display(("Alignment Score:" + str(score)), target="content")
   display((str1), target="content")
   display((str2), target="content")
