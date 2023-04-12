@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/pyscript.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/pyscript.js"></script>
+</head>
+
+<body>
+
+  <h1>
+    pairwise sequence alignment
+  </h1>
+  <div id="input">
+    <p>long sequence：<input type="text" name="longSeq" id="longSeq"></p>
+    <p>short sequence：<input type="text" name="shortSeq" id="shortSeq"></p>
+    <input type="button" name="submit" id="submit" value="submit" py-click="output()">
+    <input type="button" name="reset" id="reset" value="reset" py-click="reset()">
+  </div>
+  <div id="content"></div>
+  <script>
+    document.querySelector("#reset").addEventListener('click', () => {
+      let input = document.querySelector("#input")
+      let pyError = document.querySelectorAll(".py-error")
+      for (let i = 0; i < pyError.length; i++) {
+        input.removeChild(pyError[i])
+      }
+    })
+  </script>
+  <py-script src="./alignment.py"></py-script>
+
+</body>
+
+</html>

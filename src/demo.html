@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+  <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+  <textarea id="test" cols="30" rows="10"></textarea>
+  <input py-click="myprint()" type="button">
+
+</body>
+<py-script>
+  from pyscript import Element
+
+  my_div = Element('test')
+  def myprint():
+      print(type(my_div.value))
+      
+</py-script>
+
+</html>
