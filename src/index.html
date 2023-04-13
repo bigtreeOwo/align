@@ -16,24 +16,14 @@
   <h1>
     pairwise sequence alignment
   </h1>
-  <div id="input">
-    <p>long sequence：<input type="text" name="longSeq" id="longSeq"></p>
-    <p>short sequence：<input type="text" name="shortSeq" id="shortSeq"></p>
-    <input type="button" name="submit" id="submit" value="submit" py-click="output()">
-    <input type="button" name="reset" id="reset" value="reset" py-click="reset()">
+  <div id="inputSeq">
+    <p>long sequence：<input type="text" name="longSeq" id="longSeq" placeholder="long"></p>
+    <p>short sequence：<input type="text" name="shortSeq" id="shortSeq" placeholder="short"></p>
+    <button name="submit" id="submit" py-click="output()">submit</button>
+    <button name="reset" id="reset" py-click="reset()">reset</button>
   </div>
-  <div id="content"></div>
-  <script>
-    document.querySelector("#reset").addEventListener('click', () => {
-      let input = document.querySelector("#input")
-      let pyError = document.querySelectorAll(".py-error")
-      for (let i = 0; i < pyError.length; i++) {
-        input.removeChild(pyError[i])
-      }
-    })
-  </script>
+  <script src="./js/script.js"></script>
   <py-script src="./alignment.py"></py-script>
 
 </body>
-
 </html>

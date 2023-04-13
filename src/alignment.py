@@ -1,28 +1,35 @@
 from pyscript import Element
 from pyscript import display
 
+# number of button clicks
+global count
+count = 0
+
 # output the result
 def output(*args, **kwargs):
-  if not seq1 and not seq2:
-      display('Empty sequence! Please retry.', target="content")
+  global count
+  count += 1
+  if seq1.value == "" or seq2.value == "":
+      display('Empty sequence! Please retry.', target = "content-" + str(count))
+      return
   [X, Y, M] = distance_matrix(seq1.value, seq2.value)
   [str1, str2] = backtrace(seq1.value, seq2.value, X, Y, M)
   score = M[len(seq2.value)][len(seq1.value)]
-
-  display(("Alignment Score:" + str(score)), target="content")
-  display((str1), target="content")
-  display((str2), target="content")
+  display("Alignment Score:" + str(score), target = "content-" + str(count))
+  display(str1, target = "content-" + str(count))
+  display(str2, target = "content-" + str(count))
 
 # reset what you have input
 def reset():
+    global count
     seq1.clear()
     seq2.clear()
-    content.clear()
+    count = 0
+
 
 # id selector
 seq1 = Element("longSeq")
 seq2 = Element("shortSeq")
-content = Element("content")
 
 # global variable
 global S

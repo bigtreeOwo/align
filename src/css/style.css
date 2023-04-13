@@ -8,19 +8,20 @@ body {
 }
 
 h1 {
-  font-family: "Inconsolata", monospace;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
   text-align: center;
   font-size: 4.25rem;
   color: white;
 }
 
-#input {
-  width: 50%;
+#inputSeq {
+  width: 1000px;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-color: rgb(29, 30, 34);
-  border: 1px rgb(253, 167, 3);
   box-shadow: 2px 2px 5px black;
   border-radius: 10px;
   font-family: "Inconsolata", monospace;
@@ -29,13 +30,19 @@ h1 {
   font-weight: bold;
 }
 
-input {
+button {
   cursor: pointer;
+  border-radius: 10px;
+  border-color: white;
+  background-color: rgb(76, 79, 90);
+  box-shadow: 2px 2px 4px rgb(76, 79, 90);
+  font-weight: bold;
+  color: white;
 }
 
-#submit #reset {
-  color: white;
-  border-radius: 100px;
+button:hover{
+  background-color: white;
+  color: black;
 }
 
 #longSeq {
@@ -50,17 +57,26 @@ input {
   border: rgb(226, 189, 26) 5px;
 }
 
-#content {
-  width: 50%;
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 100px;
-  text-align: center;
+/* 这是content-n的样式，在scripts.js中使用cssText赋值 */
+.content {
+  position: relative;
+  width: 1800px;
+  margin: 50px auto 0 auto;
   background-color: rgb(29, 30, 34);
   border: 1px rgb(253, 167, 3);
   box-shadow: 2px 2px 5px black;
   border-radius: 10px;
   color: white;
-  
+}
+
+.order {
+  position: inherit;
+  left: 25px;
+  color: rgb(253, 167, 3);
+  font-size: 2rem;
+}
+
+.content div {
+  position: inherit;
+  left: 25px;
 }
