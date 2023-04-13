@@ -13,3 +13,7 @@ short sequence：EEEEEBBBBBFFF
   使用动态规划的方法（Needleman-Wunsch算法）。
   计算空位的罚分时，使用仿射空位罚分策略，gap opening的分数为-11，gap extension的分数为-1。
   
+# 环境搭建
+  本项目采用前端html和pyscript后端代码，使用Node.js搭建web服务。python版本为3.11.2，Node.js版本为18.16.0。需要安装python的pyscript库和Node.js的express模块。
+  
+  建议使用vscode打开align文件，在终端中使用dos命令cd切换目录到./align，输入node Server.js启动web服务器，在浏览器中输入localhost:9090访问页面（设置的端口为9090），
