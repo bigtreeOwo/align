@@ -5,5 +5,5 @@ app.use(express.static(__dirname + "/src"));
 
 // 使用9090端口创建nodejs服务器
 app.listen(9090,()=>{
-	console.log("服务器启动成功！请查看浏览器");
+	console.log("服务器启动成功！请查看浏览器，在浏览器的地址栏输入localhost:9090");
 })
