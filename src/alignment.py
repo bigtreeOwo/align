@@ -15,7 +15,7 @@ def output(*args, **kwargs):
   [X, Y, M] = distance_matrix(seq1.value, seq2.value)
   [str1, str2] = backtrace(seq1.value, seq2.value, X, Y, M)
   score = M[len(seq2.value)][len(seq1.value)]
-  display("Alignment Score:" + str(score), target = "content-" + str(count))
+  display("Alignment Score:" + " " + str(score), target = "content-" + str(count))
   display(str1, target = "content-" + str(count))
   display(str2, target = "content-" + str(count))
 

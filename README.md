@@ -37,4 +37,10 @@ node Server.js
 
 启动web服务器，在浏览器中输入<font color=red>localhost:9090</font>访问页面（在Server.js中设置的端口为9090，可以自行更改）。
 
- 
+
+
+# 使用方法
+
+###### <font color='red'>打开页面后需要等待3到5秒使pyscript完全加载 </font>
+
+​	在longSeq中输入长蛋白质序列，在short中输入短蛋白质序列。点击submit输出对比结果，点击reset清除输出的结果，点击blastonline可以打开内嵌网页在线输入序列查看结果(<font color='red'>加载速度较慢，请耐心等待</font>)。
