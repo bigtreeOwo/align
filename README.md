@@ -20,7 +20,7 @@ short sequence：EEEEEBBBBBFFF
 安装python的pyscript库
 
 ```python
-pip insstall pyscript
+pip install pyscript
 ```
 
   安装Node.js的express模块
