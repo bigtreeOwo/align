@@ -1,2 +1,9 @@
 /node_modules/
 demo.html
+/src/alignment.py
+/src/js/align.js
+/src/js/pyscript.js
+/src/css/pyscript.css
+package.json
+package-lock.json
+Server.js
